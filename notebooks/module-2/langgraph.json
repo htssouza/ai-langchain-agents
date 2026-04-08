@@ -1,0 +1,7 @@
+{
+  "dependencies": ["."],
+  "graphs": {
+    "agent": "./2.1_flight_booking.py:agent"
+  },
+  "env": "../../.env"
+}
