@@ -23,23 +23,24 @@ Return recipe suggestions and eventually the recipe instructions to the user, if
 """
 
 from langchain.agents import create_agent
-from langchain.messages import HumanMessage
+
+# from langchain.messages import HumanMessage
 
 agent = create_agent(
     model="gpt-5-nano", tools=[web_search], system_prompt=system_prompt
 )
 
-config = {"configurable": {"thread_id": "1"}}
+# config = {"configurable": {"thread_id": "1"}}
 
-response = agent.invoke(
-    {
-        "messages": [
-            HumanMessage(
-                content="I have some leftover chicken and rice. What can I make?"
-            )
-        ]
-    },
-    config,
-)
+# response = agent.invoke(
+#     {
+#         "messages": [
+#             HumanMessage(
+#                 content="I have some leftover chicken and rice. What can I make?"
+#             )
+#         ]
+#     },
+#     config,
+# )
 
-print(response["messages"][-1].content)
+# print(response["messages"][-1].content)
